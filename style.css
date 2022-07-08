@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1d2630;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 30px;
+    color: #c8a8c1;
+    margin-bottom: -80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-width: 405px;
+    margin: 135px auto;
+    border-radius: 7px;
+    background-color: #c9bcc6;
+    padding: 28px 0;
+}
+
+.task-input {
+    height: 40px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.task-input input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px 0 15px;
+    font-size: 18px;
+    border-radius: 2px;
+    border: 2px solid #111;
+    outline: none;
+}
+
+.task-input input::placeholder {
+    color: #d1ddd1;
+}
+
+.controls,
+li {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.controls {
+    padding: 18px 25px;
+    border-bottom: 3px solid #111;
+}
+
+.filters span {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 17px;
+}
+
+.filters span:first-child {
+    margin-left: 0;
+}
+
+.filters span.active {
+    color: brown;
+}
+
+.controls .clear-btn {
+    outline: none;
+    border: none;
+    color: #111;
+    padding: 7px 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #c8a8c1;
+}
+
+.controls .clear-btn:hover {
+    background-color: #fff;
+}
+
+.task-box {
+    margin: 20px 25px;
+}
+
+.task-box .task {
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #111;
+}
+
+.task label {
+    display: flex;
+}
+
+.task label p.checked {
+    text-decoration: line-through;
+}
+
+.task-box .task:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.task label input {
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task .settings {
+    cursor: pointer;
+    position: relative;
+}
+
+.settings .task-menu {
+    position: absolute;
+    background-color: #c9bcc6;
+    padding: 5px 0;
+    z-index: 2;
+    right: -5px;
+    bottom: -65px;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.settings .task-menu.show {
+    transform: scale(1);
+}
+
+.task-menu li {
+    height: 25px;
+    font-size: 16px;
+    padding: 17px 10px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.task-menu li:hover {
+    background-color: #c8a8c1;
+}
+
+.task-menu li .edit {
+    padding-right: 8px;
+}
+
+.task-menu li i {
+    padding: 8px;
+}
